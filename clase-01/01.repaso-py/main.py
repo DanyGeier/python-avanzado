@@ -326,3 +326,37 @@ Descuento: 10% si supera los $50000
 
 Obtuviste un descuento
 """
+
+nombre = input("Ingrese su nombre: ")
+
+producto = input("Ingrese su producto: ")
+
+precio_unitario = float(input("Precio: "))
+
+cantidad = input("Cantidad: ")
+
+compra = {
+    "cliente": nombre,
+    "producto": producto,
+    "precio": precio_unitario,
+    "cantidad": cantidad
+}
+
+subtotal = compra["precio"] * compra["cantidad"]
+
+descuento = 0.0
+tiene_descuento = False
+
+if subtotal >= 50000:
+    descuento = subtotal * 0.10
+    tiene_descuento = True
+
+total_a_pagar = subtotal - descuento
+
+print("=========== RESUMEN DE COMPRA ============")
+print(f"Cliente: {compra['cliente']}")
+print(f"Producto: {compra['producto']}")
+print(f"Precio unitario: ${compra['precio']:.0f}")
+print(f"Cantidad: {compra['cantidad']}")
+print(f"Subtotal: ${subtotal:.0f}")
+print("Descuento: 10% si supera los $50000")

@@ -119,7 +119,43 @@ mostrar_datos(usuario)
 
 # * Cantidad de notas
 # * Suma
-# * N
 # * Nota minima
 # * Nota maxima
 # * Promedio
+
+def calcular_notas():
+    notas = [2, 4, 5, 6, 9, 10]
+    cantidad_notas = len(notas)
+    suma = sum(notas)
+    nota_minima = min(notas)
+    nota_maxima = max(notas)
+    promedio = suma / cantidad_notas
+
+    print("===== NOTAS =====\n ")
+    print("Cantidad de notas: ", cantidad_notas)
+    print("Suma de notas: ", suma)
+    print("Nota mínima: ", nota_minima)
+    print("Nota máxima: ", nota_maxima)
+    print("Promedio de notas: ", promedio)
+
+calcular_notas()
+
+## Ejercicio 3: Longitud de una palabra
+
+# 1. Pedir una palabra
+# 2. La cantidad de caracteres
+
+def longitud_palabra():
+    palabra = input("Ingrese una palabra: ")
+
+def calculo_longitud()
+    cantidad_letras = len(palabra)
+
+longitud_palabra()
+
+## Ejercicio 4: Conversor de edad
+# Pedir la edad de una persona y mostrar su edad dentro de 10 años.
+
+## Ejercicio 5: Numeros del 1 al 10
+# Mostrar los números del 1 al 10 utilizando una función integrada
+

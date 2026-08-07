@@ -1,0 +1,3 @@
+Nombre: Daniel
+Edad: 29
+Ciudad: Buenos Aires

@@ -83,3 +83,56 @@ def agregar_contenido_al_archivo():
 
 # Segunda etapa -> leer el archivo y mostrar esos datos
 
+# ! ---------------------------------------------------------
+# ! Módulos y paquetes
+# ! ---------------------------------------------------------
+
+# Modulos
+# Un módulo es un archivo que puede contener una funcionalidad o varias.
+
+# Paquetes
+# Los paquetes nos permiten agrupar módulos
+
+# ! ---------------------------------------------------------
+# ! Objetos
+# ! ---------------------------------------------------------
+
+# Crear una clase Persona
+
+class Persona:
+
+    # Método constructor -> Que se ejecuta siempre que haga un new (Siempre que cree una instancia). -> El new no existe
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def saludar(self):
+        print(f"Hola, soy {self.nombre}")
+
+persona1 = Persona("Romina", 25)
+persona2 = Persona("Nicolas", 30)
+
+persona1.saludar()
+persona2.saludar()
+
+# Otra clase más para poder crear objetos
+
+class Rectangulo:
+
+    def __init__(self, ancho, alto):
+        self.ancho = ancho
+        self.alto = alto
+
+    def calcular_area(self):
+        return self.ancho * self.alto
+
+    def calcular_perimetro(self):
+        return 2 * (self.ancho + self.alto)
+
+rectangulo1 = Rectangulo(10, 5)
+rectangulo2 = Rectangulo(8, 4)
+
+print("Area rectangulo 1: ", rectangulo1.calcular_area())
+print("Area rectangulo 2: ", rectangulo2.calcular_area())
+print("Perimetro rectangulo 1: ", rectangulo1.calcular_perimetro())
+print("Perimetro rectangulo 2: ", rectangulo2.calcular_perimetro())

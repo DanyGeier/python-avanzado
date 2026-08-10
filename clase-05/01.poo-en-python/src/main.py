@@ -3,7 +3,7 @@ from alumno import Alumno
 
 db = Database()
 
-db.crear_tabla()
+# db.crear_tabla()
 
 alumno = Alumno(
     "Ana",
@@ -13,4 +13,9 @@ alumno = Alumno(
     "Python"
 )
 
-db.insertar_alumno(alumno)
+# db.insertar_alumno(alumno)
+
+alumnos = db.listar_alumnos()
+print(alumnos)
+for alumno in alumnos:
+    print(alumno)

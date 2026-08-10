@@ -50,3 +50,19 @@ class Database:
         conexion.close()
 
         print("Alumno creado")
+
+    def listar_alumnos(self):
+
+        conexion = self.conectar()
+
+        cursor = conexion.cursor()
+
+        cursor.execute("""
+            SELECT * FROM alumnos
+            """)
+        # fetchall -> Me devuelve una lista de tuplas
+        alumnos = cursor.fetchall()
+
+        conexion.close()
+
+        return alumnos

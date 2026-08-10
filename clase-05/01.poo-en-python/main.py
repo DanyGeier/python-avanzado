@@ -108,3 +108,35 @@ vehiculo2.hacer_willy()
 print(Auto.__bases__)
 print(Moto.__bases__) # Padres directos
 print(Auto.__mro__) # orden completo en el que python busca atributos y métodos
+
+# https://ellibrodepython.com
+
+## Bases de datos con Python
+
+# 1. Importo el módulo
+# sqlite es una versión minimalista de los motores SQL trabaja persistiendo la DB dentro de un archivo.
+import sqlite3
+
+# 2. Conexión a la DB
+conexion = sqlite3.connect("escuela.db")
+
+# 3. Creo un cursor para poder empezar a interactuar con la DB
+cursor = conexion.cursor()
+
+# 4. Preparo la consulta
+cursor.execute(""" 
+        CREATE TABLE IF NOT EXISTS alumnos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nombre TEXT NOT NULL,
+            apellido TEXT NOT NULL,
+            edad INTEGER,
+            email TEXT,
+            curso TEXT
+        )
+        """)
+
+# 5. Ejecuto sentencias SQL -> Hago la consulta a la DB
+conexion.commit()
+
+# 6. Cerrar la conexión (Desconectarse de la DB)
+conexion.close()
